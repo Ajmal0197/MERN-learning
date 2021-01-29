@@ -10,8 +10,8 @@ const config = require('config');
 // Load User model
 const User = require('../../models/User');
 
-// @route   POST api/users/test
-// @desc    Register users
+// @route   POST api/users
+// @desc    User Registration
 // @access  Public ie without token
 router.post('/',
     [
@@ -21,7 +21,7 @@ router.post('/',
     ],
     async (req, res) => {
 
-        // Check Validation if error return 400 and error message
+        // Check Validation if error return 400 and error body
         const errors = validationResult(req);
         if (!errors.isEmpty()) {
             return res.status(400).json({ errors: errors.array() });
@@ -30,6 +30,7 @@ router.post('/',
         const { name, email, password } = req.body;
 
         try {
+            // Find user by email
             let user = await User.findOne({ email });
 
             //1)See if user exists, return bad request
@@ -45,20 +46,20 @@ router.post('/',
             })
 
 
-            //Create user instance to save to DB
+            //3)Create user instance to save to DB
             user = new User({
                 name, email, avatar, password
             })
 
 
-            //3)Encrypt password
+            //4)Encrypt password
             const salt = await bcrypt.genSalt(10);
             user.password = await bcrypt.hash(password, salt);      //encrypt pw of user instance
             await user.save();                                      //save user info to db
 
 
-            //4)Return json web token, so that if user registers successfully he logs in right away
-            //get the registerd user's _id of DB and make payload like below
+            //5)Return json web token, so that if user registers successfully he logs in right away
+            //get the registerd user's _id of mongo DB and make payload like below
             const payload = {
                 user: {
                     id: user.id     //id==_id
