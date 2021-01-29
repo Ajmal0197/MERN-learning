@@ -76,7 +76,6 @@ router.post('/',
                 }
             );
 
-
             // res.send('User Registered Successfully');
         } catch (error) {
             console.error(error.message)
