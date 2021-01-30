@@ -6,13 +6,8 @@ const Schema = mongoose.Schema;
 // Create Schema
 const ProfileSchema = new Schema({
   user: {
-    type: Schema.Types.ObjectId,
-    ref: 'users'
-  },
-  handle: {
-    type: String,
-    required: true,
-    max: 40
+    type: Schema.Types.ObjectId,  //ref to connect with users db's _id
+    ref: 'users'                  //User modal
   },
   company: {
     type: String
@@ -28,7 +23,7 @@ const ProfileSchema = new Schema({
     required: true
   },
   skills: {
-    type: [String],
+    type: [String],   //put , separated list in req for array of strings
     required: true
   },
   bio: {
@@ -37,7 +32,7 @@ const ProfileSchema = new Schema({
   githubusername: {
     type: String
   },
-  experience: [
+  experience: [     //array of other fields
     {
       title: {
         type: String,
@@ -115,7 +110,7 @@ const ProfileSchema = new Schema({
   },
   date: {
     type: Date,
-    default: Date.now
+    default: Date.now     //current timestamp
   }
 });
 

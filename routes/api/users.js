@@ -46,7 +46,7 @@ router.post('/',
             })
 
 
-            //3)Create user instance to save to DB
+            //3)Create/Build user instance/object to save to DB
             user = new User({
                 name, email, avatar, password
             })
