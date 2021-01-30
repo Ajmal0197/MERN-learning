@@ -7,7 +7,7 @@ const Schema = mongoose.Schema;
 const ProfileSchema = new Schema({
   user: {
     type: Schema.Types.ObjectId,  //ref to connect with users db's _id
-    ref: 'users'                  //User modal
+    ref: 'user'                  //User modal
   },
   company: {
     type: String

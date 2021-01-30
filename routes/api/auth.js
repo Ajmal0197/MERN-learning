@@ -27,11 +27,10 @@ router.get("/", auth, async (req, res) => {
 // @route   POST api/auth
 // @desc    Authenticate users & get token
 // @access  Public 
-router.post('/',
-  [
-    check('email', 'Please include a valid email').isEmail(),
-    check('password', 'Password is required').exists()
-  ],
+router.post(
+  '/',
+  check('email', 'Please include a valid email').isEmail(),
+  check('password', 'Password is required').exists(),
   async (req, res) => {
 
     // Check Validation if error return 400 and error message
@@ -79,7 +78,7 @@ router.post('/',
       // res.send('User Registered Successfully');
     } catch (error) {
       console.error(error.message)
-      res.status(500).send('Server error');
+      res.status(500).send('Server Error');
     }
 
   });

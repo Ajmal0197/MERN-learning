@@ -19,7 +19,7 @@ app.use('/api/auth', require('./routes/api/auth'))
 app.use('/api/profile', require('./routes/api/profile'))
 app.use('/api/posts', require('./routes/api/posts'))
 
-app.get('/', (req, res) => res.send('Hello World'));
+app.get('/', (req, res) => res.send('http://localhost:5000/  -->  is my home page'));
 
 const port = process.env.PORT || 5000;
 

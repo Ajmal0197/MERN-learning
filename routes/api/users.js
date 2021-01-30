@@ -13,12 +13,11 @@ const User = require('../../models/User');
 // @route   POST api/users
 // @desc    User Registration
 // @access  Public ie without token
-router.post('/',
-    [
-        check('name', 'Name is required').not().isEmpty(),
-        check('email', 'Please include a valid email').isEmail(),
-        check('password', 'Please enter password with 6 or more characters').isLength({ min: 6 })
-    ],
+router.post(
+    '/',
+    check('name', 'Name is required').notEmpty(),
+    check('email', 'Please include a valid email').isEmail(),
+    check('password', 'Please enter password with 6 or more characters').isLength({ min: 6 }),
     async (req, res) => {
 
         // Check Validation if error return 400 and error body
@@ -79,7 +78,7 @@ router.post('/',
             // res.send('User Registered Successfully');
         } catch (error) {
             console.error(error.message)
-            res.status(500).send('Server error');
+            res.status(500).send('Server Error');
         }
 
     });
