@@ -1,7 +1,0 @@
-
-{
-    "mongoURI": "mongodb+srv://ajmal123:ajmal123@devconnector.xxaar.mongodb.net/<dbname>?retryWrites=true&w=majority",
-    "jwtSecret": "mysecrettoken",
-    "githubClientId":"c364fc8372bb5ffacebd",
-    "githubSecret":"ce11e7e7cd89d5099792f110418be7f6cc4dbda9"
-}
