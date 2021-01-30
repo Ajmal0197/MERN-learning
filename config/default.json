@@ -1,3 +1,4 @@
+
 {
     "mongoURI": "mongodb+srv://ajmal123:ajmal123@devconnector.xxaar.mongodb.net/<dbname>?retryWrites=true&w=majority",
     "jwtSecret": "mysecrettoken",
