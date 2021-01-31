@@ -23,9 +23,6 @@ module.exports = function (req, res, next) {
 
 
 
-
-
-
 /*  From token fetching decoded user id that we set at user registration/login time //JWT.io
 {
 "user": { "id": "60145f6e0f385f20fc260ed6" }, 
