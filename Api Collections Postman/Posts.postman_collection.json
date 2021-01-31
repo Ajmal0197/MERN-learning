@@ -1,0 +1,312 @@
+{
+	"info": {
+		"_postman_id": "730e4747-2e2b-4601-8cf2-28683fb48d15",
+		"name": "Posts",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create a post",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjAxNDU1MTJmZTUxYzgzMzc0ZjM3ZjQ0In0sImlhdCI6MTYxMjA3MzY0NSwiZXhwIjoxNjEyNDMzNjQ1fQ.3tlvud_mPdgnCIFqZ6W57oMJsNgiyYM7XvneSgV1WfU",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"text\":\"There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/posts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": " Get all posts",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjAxNDU1MTJmZTUxYzgzMzc0ZjM3ZjQ0In0sImlhdCI6MTYxMjA3MzY0NSwiZXhwIjoxNjEyNDMzNjQ1fQ.3tlvud_mPdgnCIFqZ6W57oMJsNgiyYM7XvneSgV1WfU",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/posts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get post by ID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjAxNDU1MTJmZTUxYzgzMzc0ZjM3ZjQ0In0sImlhdCI6MTYxMjA3MzY0NSwiZXhwIjoxNjEyNDMzNjQ1fQ.3tlvud_mPdgnCIFqZ6W57oMJsNgiyYM7XvneSgV1WfU",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/posts/60164d7614125a4280316a67",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"posts",
+						"60164d7614125a4280316a67"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a post",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjAxNDU1MTJmZTUxYzgzMzc0ZjM3ZjQ0In0sImlhdCI6MTYxMjA3MzY0NSwiZXhwIjoxNjEyNDMzNjQ1fQ.3tlvud_mPdgnCIFqZ6W57oMJsNgiyYM7XvneSgV1WfU",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/posts/6016517f576d8d40281a318e",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"posts",
+						"6016517f576d8d40281a318e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Like a post",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjAxNDU1MTJmZTUxYzgzMzc0ZjM3ZjQ0In0sImlhdCI6MTYxMjA3MzY0NSwiZXhwIjoxNjEyNDMzNjQ1fQ.3tlvud_mPdgnCIFqZ6W57oMJsNgiyYM7XvneSgV1WfU",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/posts/like/60164d7614125a4280316a67",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"posts",
+						"like",
+						"60164d7614125a4280316a67"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Unlike a post",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjAxNDU1MTJmZTUxYzgzMzc0ZjM3ZjQ0In0sImlhdCI6MTYxMjA3MzY0NSwiZXhwIjoxNjEyNDMzNjQ1fQ.3tlvud_mPdgnCIFqZ6W57oMJsNgiyYM7XvneSgV1WfU",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/posts/unlike/60164d7614125a4280316a67",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"posts",
+						"unlike",
+						"60164d7614125a4280316a67"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Comment on a post",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjAxNDU1MTJmZTUxYzgzMzc0ZjM3ZjQ0In0sImlhdCI6MTYxMjA3MzY0NSwiZXhwIjoxNjEyNDMzNjQ1fQ.3tlvud_mPdgnCIFqZ6W57oMJsNgiyYM7XvneSgV1WfU",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"text\":\"Posting another comment.\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/posts/comment/60164d7614125a4280316a67",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"posts",
+						"comment",
+						"60164d7614125a4280316a67"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete comment",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjAxNDU1MTJmZTUxYzgzMzc0ZjM3ZjQ0In0sImlhdCI6MTYxMjA3MzY0NSwiZXhwIjoxNjEyNDMzNjQ1fQ.3tlvud_mPdgnCIFqZ6W57oMJsNgiyYM7XvneSgV1WfU",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/posts/comment/60164d7614125a4280316a67/6016631fc9129c4b3c2f3be2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"posts",
+						"comment",
+						"60164d7614125a4280316a67",
+						"6016631fc9129c4b3c2f3be2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

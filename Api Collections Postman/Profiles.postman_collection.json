@@ -1,0 +1,312 @@
+{
+	"info": {
+		"_postman_id": "55061a40-7e97-4f8a-8def-0ad40100ab2f",
+		"name": "Profiles",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get logged in users profile",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjAxNDU1MTJmZTUxYzgzMzc0ZjM3ZjQ0In0sImlhdCI6MTYxMTk5MTIyNCwiZXhwIjoxNjEyMzUxMjI0fQ.4YP8ItiejZxoJ7QwxeJnTZX1tW6RWM8aQ0Hou3bfVLM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/profile/me",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"profile",
+						"me"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create/Update user's profile",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjAxNDU1MTJmZTUxYzgzMzc0ZjM3ZjQ0In0sImlhdCI6MTYxMTk5MTIyNCwiZXhwIjoxNjEyMzUxMjI0fQ.4YP8ItiejZxoJ7QwxeJnTZX1tW6RWM8aQ0Hou3bfVLM",
+						"description": "Akram's token",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"company\":\"Techahead\",\r\n    \"status\":\"Developer\",\r\n    \"skills\":\"MERN, React Native\",\r\n    \"location\":\"New Delhi, IN\",\r\n    \"bio\":\"I am Developer and Student\",\r\n    \"githubusername\":\"ajmal0197\",\r\n    \"twitter\": \"twitter@gmail.com\",\r\n    \"facebook\": \"facebook@gmail.com\",\r\n    \"youtube\": \"youtube@gmail.com\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/profile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all profiles of users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/profile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get profile of user by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/profile/user/60145512fe51c83374f37f44",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"profile",
+						"user",
+						"60145512fe51c83374f37f44"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete profile, user",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjAxNTNjYjM3OTVjNzQzZWY4MmZkMzI1In0sImlhdCI6MTYxMjAwNDU1NiwiZXhwIjoxNjEyMzY0NTU2fQ.yV2_XvIZ2IcX3eGpr4ZR6pBBtd9wv1sdtAKKq2wBYjc",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/profile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add experience in profile",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjAxNDU1MTJmZTUxYzgzMzc0ZjM3ZjQ0In0sImlhdCI6MTYxMTk5MTIyNCwiZXhwIjoxNjEyMzUxMjI0fQ.4YP8ItiejZxoJ7QwxeJnTZX1tW6RWM8aQ0Hou3bfVLM",
+						"description": "Akram's token",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"Software Developer\",\r\n    \"company\":\"Techahead\",\r\n    \"location\":\"Noida\",\r\n    \"from\": \"1612006508\",\r\n    \"current\":true,\r\n    \"description\":\"Fullstack mobile app developer\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/profile/experience",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"profile",
+						"experience"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete particular experience in profile",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjAxNDU1MTJmZTUxYzgzMzc0ZjM3ZjQ0In0sImlhdCI6MTYxMTk5MTIyNCwiZXhwIjoxNjEyMzUxMjI0fQ.4YP8ItiejZxoJ7QwxeJnTZX1tW6RWM8aQ0Hou3bfVLM",
+						"description": "Akram's token",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"Software Developer\",\r\n    \"company\":\"Techahead\",\r\n    \"location\":\"Noida\",\r\n    \"from\": \"1612006508\",\r\n    \"current\":true,\r\n    \"description\":\"Fullstack mobile app developer\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/profile/experience/601548cd9dbfd13a3c31db85",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"profile",
+						"experience",
+						"601548cd9dbfd13a3c31db85"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add education in profile",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjAxNDU1MTJmZTUxYzgzMzc0ZjM3ZjQ0In0sImlhdCI6MTYxMTk5MTIyNCwiZXhwIjoxNjEyMzUxMjI0fQ.4YP8ItiejZxoJ7QwxeJnTZX1tW6RWM8aQ0Hou3bfVLM",
+						"description": "Akram's token",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"school\":\"DAV PS\",\r\n    \"degree\":\"BTech\",\r\n    \"fieldofstudy\":\"Computer science\",\r\n    \"from\": \"1012006508\",\r\n    \"to\":\"1612006508\",\r\n    \"description\":\"Pursuing Mtech\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/profile/education",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"profile",
+						"education"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete particular education in profile",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjAxNDU1MTJmZTUxYzgzMzc0ZjM3ZjQ0In0sImlhdCI6MTYxMTk5MTIyNCwiZXhwIjoxNjEyMzUxMjI0fQ.4YP8ItiejZxoJ7QwxeJnTZX1tW6RWM8aQ0Hou3bfVLM",
+						"description": "Akram's token",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"Software Developer\",\r\n    \"company\":\"Techahead\",\r\n    \"location\":\"Noida\",\r\n    \"from\": \"1612006508\",\r\n    \"current\":true,\r\n    \"description\":\"Fullstack mobile app developer\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/profile/education/60155f1312c7c0236c53249e",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"profile",
+						"education",
+						"60155f1312c7c0236c53249e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get github repos of user by username",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/profile/github/ajmal0197",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"profile",
+						"github",
+						"ajmal0197"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

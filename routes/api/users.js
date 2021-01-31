@@ -54,6 +54,7 @@ router.post(
             //4)Encrypt password
             const salt = await bcrypt.genSalt(10);
             user.password = await bcrypt.hash(password, salt);      //encrypt pw of user instance
+
             await user.save();                                      //save user info to db
 
 
@@ -68,7 +69,7 @@ router.post(
             jwt.sign(
                 payload,
                 config.get('jwtSecret'),
-                { expiresIn: 360000 },
+                { expiresIn: '7 days' },
                 (err, token) => {
                     if (err) throw err;
                     res.json({ token });        //return 200 with token
