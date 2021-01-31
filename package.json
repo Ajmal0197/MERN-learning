@@ -4,8 +4,10 @@
   "description": "MERN stack social media network",
   "main": "index.js",
   "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
     "start": "node server",
-    "server": "nodemon server"
+    "server": "nodemon server",
+    "client": "npm start --prefix client"
   },
   "author": "Ajmal Hasan",
   "license": "ISC",
