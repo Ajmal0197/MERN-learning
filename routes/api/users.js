@@ -76,14 +76,9 @@ router.post(
                 }
             );
 
-/*jwt.io
-{
-  "user": {
-    "id": "60145f6e0f385f20fc260ed6"
-  },
-  "iat": 1611947887,
-  "exp": 1612307887
-}
+/*
+Returns token:
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjAxNDVmNmUwZjM4NWYyMGZjMjYwZWQ2In0sImlhdCI6MTYxMTk0Nzg4NywiZXhwIjoxNjEyMzA3ODg3fQ.3LXxp6DgSVwpz7bg8y_r1VYdp5zOa9FnRDIlKq5Zvv8
 */
 
             // res.send('User Registered Successfully');
