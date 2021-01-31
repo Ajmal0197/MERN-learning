@@ -76,6 +76,16 @@ router.post(
                 }
             );
 
+/*jwt.io
+{
+  "user": {
+    "id": "60145f6e0f385f20fc260ed6"
+  },
+  "iat": 1611947887,
+  "exp": 1612307887
+}
+*/
+
             // res.send('User Registered Successfully');
         } catch (error) {
             console.error(error.message)
