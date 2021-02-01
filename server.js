@@ -13,13 +13,13 @@ connectDB()
 app.use(express.json({ extended: false }))
 
 
-//Define routes //LHS route will replace route in RHS file
+//Define routes //LHS route will merge to route in RHS file
 app.use('/api/users', require('./routes/api/users'))
 app.use('/api/auth', require('./routes/api/auth'))
 app.use('/api/profile', require('./routes/api/profile'))
 app.use('/api/posts', require('./routes/api/posts'))
 
-app.get('/', (req, res) => res.send('http://localhost:5000/  -->  is my home page'));
+app.get('/', (req, res) => res.send(' "http://localhost:5000/"  -->  is my home page'));
 
 const port = process.env.PORT || 5000;
 
