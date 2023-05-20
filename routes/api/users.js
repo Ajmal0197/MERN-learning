@@ -7,6 +7,17 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const config = require('config');
 
+/*
+const express = require('express'): Imports the Express framework, which is used to create the router.
+const router = express.Router(): Creates a new router instance using Express. The router will be used to define routes for specific endpoints.
+const { check, validationResult } = require('express-validator'): Imports the check and validationResult functions from the express-validator module. These functions are used for validating and sanitizing request bodies.
+const gravatar = require('gravatar'): Imports the gravatar module, which provides an easy way to generate Gravatar URLs based on email addresses.
+const bcrypt = require('bcryptjs'): Imports the bcryptjs module, which is used for hashing and comparing passwords securely.
+const jwt = require('jsonwebtoken'): Imports the jsonwebtoken module, which provides functions for creating and verifying JSON Web Tokens (JWTs).
+const config = require('config'): Imports the config module, which is used to access configuration settings defined in separate configuration files.
+*/
+
+
 // Load User model
 const User = require('../../models/User');
 
@@ -72,6 +83,7 @@ router.post(
         },
       };
 
+      //if session expires
       jwt.sign(
         payload,
         config.get('jwtSecret'),
